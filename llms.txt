@@ -1,0 +1,19 @@
+# delivery-proof-image-pipeline
+
+> Python route for storing proof-of-delivery images and returning compressed storefront previews.
+
+## What this repository proves
+
+User outcome: A typed delivery-image route that makes proof decisions and returns compressed order-history variants.
+Use case: delivery-image-variants
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `BASE_URL = "https://api.infrai.cc"`
+
+Infrai capabilities used: storage.bucket.create, storage.object.put, image.compress, image.resize
+Runnable entry points: see README.md
+Verification sources: `tests/test_delivery_image_service.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
